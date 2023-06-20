@@ -11,29 +11,54 @@
     justify-content: center;
     align-items: center;
     border: 2px solid black;
+    background-color: #525FE1;
 }
 
 .calculatorBody{
     border: 2px solid black;
-    height: 35rem;
-    width: 22rem;
+    height: 37rem;
+    width: 24rem;
     display: flex;
     flex-direction: column;
     border-radius: 35px;
+    background-color: #F86F03;
 }
 
 .upperSection{
     height: 25%;
-    border-bottom: 2px solid black;
+    /*border-bottom: 2px solid black;*/
+    display: flex;
+    padding: 1rem;
+    padding-top: 1.6rem;
+}
+.display{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    flex-grow: 1;
+    background-color: #FFA41B;
+    border-radius: 15px;
+}
+
+.display1{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding: 0 0.8rem 0.5rem 0;
+    font-size: 1.6rem;
+}
+#display2{
+    display: none;
+
 }
 
 .lowerSection{
-    padding: 0.6rem;
+    padding: 0.9rem;
     height: 75%;
     display: flex;
-    align-content: space-between;
-    justify-content: space-between;
-    gap: 3px;
+    align-content: flex-end;
+    justify-content: space-around;
+    gap: 5px;
     flex-wrap: wrap;
     
 }
@@ -42,23 +67,41 @@
     justify-content: center;
     align-items: center;
     font-size: 1.5rem;
-    border: 2px solid black;
+    
     border-radius: 50px;
-    width: 4.8rem;
-    height: 4.8rem;   
+    width: 4.7rem;
+    height: 4.7rem; 
+    background-color: #FFA41B;  
 }
 
-.keys:hover{
-    background-color: aqua;
-    height: 4.9rem;
-    width: 4.9rem;
+.operatorK:hover{
+    background-color: rgb(164, 175, 196);
+    height: 4.75rem;
+    width: 4.75rem;
 }
+.specialK:hover{
+    background-color: #d1f23d;
+    height: 4.75rem;
+    width: 4.75rem;
+}
+.numK:hover{
+    background-color: #63ebe4;
+    height: 4.75rem;
+    width: 4.75rem;
+}
+.equalsK:hover{
+    background-color: #6aec8d;
+    height: 4.75rem;
+    width: 4.75rem;
+}
+
+
 
 #seventeen, #eighteen{
     
     flex-shrink: 0;
 }
 #equalsKey{
-    width: 9.8rem;
+    width: 9.9rem;
     
 }
