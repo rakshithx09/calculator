@@ -67,10 +67,9 @@
     justify-content: center;
     align-items: center;
     font-size: 1.5rem;
-    
     border-radius: 50px;
-    width: 4.7rem;
-    height: 4.7rem; 
+    width: 4.8rem;
+    height: 4.8rem; 
     background-color: #FFA41B;  
 }
 
@@ -102,6 +101,6 @@
     flex-shrink: 0;
 }
 #equalsKey{
-    width: 9.9rem;
+    width: 10rem;
     
 }
