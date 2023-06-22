@@ -27,25 +27,17 @@ let expArray = [];
 
 Delete.addEventListener('click', () => {
     expArray = expression.split(" ");
-
-    console.log(expArray);
     if (expArray[expArray.length - 1] == "") {
-        console.log('trimmed');
         expArray.pop();
     }
-
     if (!isNaN(expArray[expArray.length - 1])) {
         expArray[expArray.length - 1] = Math.floor(expArray[expArray.length - 1] / 10);
         if ((expArray[expArray.length - 1]) == 0) {
             expArray.pop();
-            console.log("hiii");
         }
-        console.log(expArray);
     } else {
-        console.log("hi");
         expArray.pop();
     }
-
     expression = expArray.join(" ");
     upperDisplay.textContent = expression;
     lowerDisplay.style.display = 'none';
@@ -85,11 +77,11 @@ operatorKeys.forEach(key => {
 });
 
 point.addEventListener('click', () => {
-    console.log("dot");
     if (!isDotClicked && isNumClicked) {
         expression += point.textContent;
         upperDisplay.textContent = expression;
         isDotClicked = 1;
+        isNumClicked=0;
     }
 });
 
@@ -113,9 +105,12 @@ function handleEquation() {
             operator = eqnArray[operatorIndex];
             result = calculate(firstNumber, operator, secondNumber);
             eqnArray.splice(operatorIndex - 1, 3, result);
-            console.log(eqnArray);
         }
     }
+    if (eqnArray.length==1) {
+        lowerDisplay.textContent=`=${eqnArray[0]}`;
+    }
+    else
     lowerDisplay.textContent = `=${result.toFixed(1)}`;
 }
 

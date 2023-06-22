@@ -1,5 +1,5 @@
-*{
-    margin:0px ;
+* {
+    margin: 0px;
     padding: 0px;
     box-sizing: border-box;
     font-family: 'Bagel Fat One', cursive;
@@ -7,7 +7,7 @@
     color: black;
 }
 
-.fullbody{
+.fullbody {
     height: 100vh;
     width: 100vw;
     display: flex;
@@ -17,7 +17,7 @@
     background-color: #525FE1;
 }
 
-.calculatorBody{
+.calculatorBody {
     border: 2px solid black;
     height: 37rem;
     width: 24rem;
@@ -27,14 +27,15 @@
     background-color: #212121;
 }
 
-.upperSection{
+.upperSection {
     height: 25%;
     /*border-bottom: 2px solid black;*/
     display: flex;
     padding: 1rem;
     padding-top: 1.6rem;
 }
-.display{
+
+.display {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -43,7 +44,7 @@
     border-radius: 15px;
 }
 
-.display1{
+.display1 {
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
@@ -51,12 +52,13 @@
     font-size: 1.6rem;
     color: white;
 }
-#display2{
+
+#display2 {
     display: none;
     color: #30c4ff;
 }
 
-.lowerSection{
+.lowerSection {
     padding: 0.9rem;
     height: 75%;
     display: flex;
@@ -64,57 +66,49 @@
     justify-content: space-around;
     gap: 5px;
     flex-wrap: wrap;
-    
+
 }
-.keys{
+
+.keys {
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 1.5rem;
     border-radius: 50px;
     width: 4.8rem;
-    height: 4.8rem; 
-    background-color: #b99661;  
+    height: 4.8rem;
+    background-color: #b99661;
 }
 
-.operatorK:hover{
+.operatorK:hover {
     background-color: rgb(164, 175, 196);
     height: 4.75rem;
     width: 4.75rem;
 }
-.specialK:hover{
+
+.specialK:hover {
     background-color: #ee5650;
     height: 4.75rem;
     width: 4.75rem;
 }
-.numK:hover{
+
+.numK:hover {
     background-color: #63ebe4;
     height: 4.75rem;
     width: 4.75rem;
 }
-.equalsK:hover{
+
+.equalsK:hover {
     background-color: #6aec8d;
     height: 4.75rem;
     width: 4.75rem;
 }
 
-.point:hover{
+.point:hover {
     background-color: #beff45;
 }
 
-#equalsKey{
+#equalsKey {
     width: 10rem;
-    
+
 }
-
-
-
-
-
-
-
-
-
-
-
-
