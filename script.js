@@ -58,7 +58,6 @@ ac.addEventListener('click', () => {
 numKeys.forEach(key => {
     key.addEventListener('click', () => {
         isNumClicked = 1;
-        isDotClicked = 0;
         expression += key.textContent;
         upperDisplay.textContent = expression;
         lowerDisplay.style.display = 'none';
@@ -69,6 +68,7 @@ operatorKeys.forEach(key => {
     key.addEventListener('click', () => {
         if (isNumClicked) {
             expression += ` ${key.textContent} `;
+            isDotClicked = 0;
             upperDisplay.textContent = expression;
             lowerDisplay.style.display = 'none';
             isNumClicked = 0;
