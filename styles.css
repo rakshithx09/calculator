@@ -2,6 +2,9 @@
     margin:0px ;
     padding: 0px;
     box-sizing: border-box;
+    font-family: 'Bagel Fat One', cursive;
+    font-family: 'Nunito', sans-serif;
+    color: black;
 }
 
 .fullbody{
@@ -21,7 +24,7 @@
     display: flex;
     flex-direction: column;
     border-radius: 35px;
-    background-color: #F86F03;
+    background-color: #212121;
 }
 
 .upperSection{
@@ -36,7 +39,7 @@
     flex-direction: column;
     justify-content: flex-end;
     flex-grow: 1;
-    background-color: #FFA41B;
+    background-color: #514b42;
     border-radius: 15px;
 }
 
@@ -46,10 +49,11 @@
     align-items: flex-end;
     padding: 0 0.8rem 0.5rem 0;
     font-size: 1.6rem;
+    color: white;
 }
 #display2{
     display: none;
-
+    color: #30c4ff;
 }
 
 .lowerSection{
@@ -70,7 +74,7 @@
     border-radius: 50px;
     width: 4.8rem;
     height: 4.8rem; 
-    background-color: #FFA41B;  
+    background-color: #b99661;  
 }
 
 .operatorK:hover{
@@ -79,7 +83,7 @@
     width: 4.75rem;
 }
 .specialK:hover{
-    background-color: #d1f23d;
+    background-color: #ee5650;
     height: 4.75rem;
     width: 4.75rem;
 }
@@ -94,13 +98,23 @@
     width: 4.75rem;
 }
 
-
-
-#seventeen, #eighteen{
-    
-    flex-shrink: 0;
+.point:hover{
+    background-color: #beff45;
 }
+
 #equalsKey{
     width: 10rem;
     
 }
+
+
+
+
+
+
+
+
+
+
+
+

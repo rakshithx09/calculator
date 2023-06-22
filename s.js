@@ -13,65 +13,55 @@ const divide = document.getElementById("divideKey");
 const equals = document.getElementById("equalsKey");
 const Delete = document.getElementById("cKey");
 
-const point = document.getElementById("point");
-const ac = document.getElementById("acKey");
-
-let firstNumber = 0, secondNumber = 0, operator = "", temp = "";
+let firstNumber = 0, secondNumber = 0, operator = "", temp="";
 let isNumClicked = 0;
-let isOperatorClicked = 0;
-let isDotClicked = 0;
+letisOperatorClicked = 0;
 let expression = "";
-let result = 0;
+let result=0 ;
 let array = [];
-let expArray = [];
 
 Delete.addEventListener('click', () => {
-    expArray = expression.split(" ");
+    let expArray = expression.split(" ");
 
     console.log(expArray);
-    if (expArray[expArray.length - 1] == "") {
-        console.log('trimmed');
-        expArray.pop();
-    }
 
-    if (!isNaN(expArray[expArray.length - 1])) {
-        expArray[expArray.length - 1] = Math.floor(expArray[expArray.length - 1] / 10);
-        if ((expArray[expArray.length - 1]) == 0) {
+    if (!isNaN(expArray[expArray.length-1])) {
+        expArray[expArray.length-1]= Math.floor(expArray[expArray.length-1]/10);
+        if ((expArray[expArray.length-1])==0){
             expArray.pop();
-            console.log("hiii");
         }
         console.log(expArray);
-    } else {
+    } else{
         console.log("hi");
         expArray.pop();
     }
-
+    if (expArray[expArray.length-1] ==" " ) {
+        expArray.pop();
+    }
+    
     expression = expArray.join(" ");
     upperDisplay.textContent = expression;
     lowerDisplay.style.display = 'none';
-    if (isNaN(expArray[expArray.length - 1])) {
-        expression += " ";
-        isNumClicked = 0;
-    } else {
-        isNumClicked = 1
+    if (isNaN(expArray[expArray.length-1])) {
+       // expression+=" ";
+        isNumClicked=0;
+    }else{
+        isNumClicked=1
     }
 })
-
-ac.addEventListener('click', () => {
-    expression = "";
-    upperDisplay.textContent = expression;
-    lowerDisplay.style.display = 'none';
-});
 
 numKeys.forEach(key => {
     key.addEventListener('click', () => {
         isNumClicked = 1;
-        isDotClicked = 0;
         expression += key.textContent;
         upperDisplay.textContent = expression;
         lowerDisplay.style.display = 'none';
+
     });
 });
+
+
+//gggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg
 
 operatorKeys.forEach(key => {
     key.addEventListener('click', () => {
@@ -84,15 +74,6 @@ operatorKeys.forEach(key => {
     });
 });
 
-point.addEventListener('click', () => {
-    console.log("dot");
-    if (!isDotClicked && isNumClicked) {
-        expression += point.textContent;
-        upperDisplay.textContent = expression;
-        isDotClicked = 1;
-    }
-});
-
 equals.addEventListener('click', () => {
     if (isNumClicked) {
         lowerDisplay.style.display = 'flex';
@@ -103,37 +84,29 @@ equals.addEventListener('click', () => {
 });
 
 function handleEquation() {
-    let eqnArray = expression.split(" ");
+    let eqnArray = expression.split("");
     const operatorList = ["÷", "×", "+", "-", "%"];
     for (let i = 0; i < 5; i++) {
         while (eqnArray.includes(operatorList[i])) {
             let operatorIndex = eqnArray.indexOf(operatorList[i]);
-            firstNumber = Number(eqnArray[operatorIndex - 1]);
-            secondNumber = Number(eqnArray[operatorIndex + 1]);
-            operator = eqnArray[operatorIndex];
-            result = calculate(firstNumber, operator, secondNumber);
-            eqnArray.splice(operatorIndex - 1, 3, result);
+            firstNumber=Number(eqnArray[operatorIndex-1]);
+            secondNumber=Number(eqnArray[operatorIndex+1]);
+            operator=eqnArray[operatorIndex];
+            result=calculate(firstNumber, operator, secondNumber);
+            eqnArray.splice(operatorIndex-1,3,result);
             console.log(eqnArray);
         }
     }
-    lowerDisplay.textContent = `=${result.toFixed(1)}`;
+    lowerDisplay.textContent=`=${result}`;
 }
 
 function calculate(firstNumber, operator, secondNumber) {
-    if (operator === "÷") return firstNumber / secondNumber;
-    if (operator === "×") return firstNumber * secondNumber;
-    if (operator === "+") return firstNumber + secondNumber;
-    if (operator === "-") return firstNumber - secondNumber;
-    if (operator === "%") return firstNumber % secondNumber;
-
+    if (operator==="÷") return firstNumber/secondNumber;
+    if (operator==="×") return firstNumber*secondNumber;
+    if (operator==="+") return firstNumber+secondNumber;
+    if (operator==="-") return firstNumber-secondNumber;   
+    if (operator==="%") return firstNumber%secondNumber; 
+    
 }
-
-
-
-
-
-
-
-
 
 
